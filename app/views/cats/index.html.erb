@@ -1,17 +1,27 @@
-<h1>meowtown</h1>
+<!-- Full Width Image Header -->
+    <header class="header-image">
+        <div class="headline">
+            <div class="container">
+            </div>
+        </div>
+    </header>
 
-<%= link_to('make a new cat', new_cat_path) %>
+    <!-- Page Content -->
+    <div class="container">
 
-<ul>
-  <% @cats.each do |cat| %>
-    <li>
-      <h2><%= cat.name %></h2>
-      <img src='<%=cat.image_url%>' />
-      <p>lives left: <%= cat.lives %></p>
-      <%= link_to('show this cat', cat_path(cat)) %>
-    </li>
-  <% end %>
-</ul>
+        <hr class="featurette-divider">
+
+          <% @cats.each do |cat| %>
+        <!-- First Featurette -->
+        <div class="featurette" id="about">
+            <img class="featurette-image img-circle img-responsive pull-right" src="<%=cat.image_url%>">
+            <h2 class="featurette-heading"><%= cat.name %>
+                <span class="text-muted"><%= link_to('See More', cat_path(cat)) %></span>
+            </h2>
+            <p class="lead">Lives Left: <%= cat.lives %></p>
+        </div>
+        <% end %>
+
 
 
 
