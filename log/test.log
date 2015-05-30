@@ -19,3 +19,290 @@ WHERE c.contype = 'f'
   AND t3.nspname = ANY (current_schemas(false))
 ORDER BY c.conname
 [0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (9.3ms)[0m  INSERT INTO "cats" ("name", "life_story", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Zora Kohler"], ["life_story", "Facilis facere vel consequatur dolor quas debitis sunt. Cumque fugit aliquid enim architecto tenetur eligendi autem. Reiciendis vel numquam molestiae ullam assumenda eum quo. Nam dolor esse dolorem impedit quisquam cumque. Quasi non odio nesciunt."], ["image_url", "http://robohash.org/omnisipsaillum.png?size=300x300"], ["created_at", "2015-05-30 02:23:58.245255"], ["updated_at", "2015-05-30 02:23:58.245255"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "cats" ("name", "life_story", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Zora Kohler"], ["life_story", "Facilis facere vel consequatur dolor quas debitis sunt. Cumque fugit aliquid enim architecto tenetur eligendi autem. Reiciendis vel numquam molestiae ullam assumenda eum quo. Nam dolor esse dolorem impedit quisquam cumque. Quasi non odio nesciunt."], ["image_url", "http://robohash.org/omnisipsaillum.png?size=300x300"], ["created_at", "2015-05-30 02:23:58.271237"], ["updated_at", "2015-05-30 02:23:58.271237"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "cats" ("name", "life_story", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Zora Kohler"], ["life_story", "Facilis facere vel consequatur dolor quas debitis sunt. Cumque fugit aliquid enim architecto tenetur eligendi autem. Reiciendis vel numquam molestiae ullam assumenda eum quo. Nam dolor esse dolorem impedit quisquam cumque. Quasi non odio nesciunt."], ["image_url", "http://robohash.org/omnisipsaillum.png?size=300x300"], ["created_at", "2015-05-30 02:23:58.273752"], ["updated_at", "2015-05-30 02:23:58.273752"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cats" ("name", "life_story", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Zora Kohler"], ["life_story", "Facilis facere vel consequatur dolor quas debitis sunt. Cumque fugit aliquid enim architecto tenetur eligendi autem. Reiciendis vel numquam molestiae ullam assumenda eum quo. Nam dolor esse dolorem impedit quisquam cumque. Quasi non odio nesciunt."], ["image_url", "http://robohash.org/omnisipsaillum.png?size=300x300"], ["created_at", "2015-05-30 02:23:58.275535"], ["updated_at", "2015-05-30 02:23:58.275535"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "cats" ("name", "life_story", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Zora Kohler"], ["life_story", "Facilis facere vel consequatur dolor quas debitis sunt. Cumque fugit aliquid enim architecto tenetur eligendi autem. Reiciendis vel numquam molestiae ullam assumenda eum quo. Nam dolor esse dolorem impedit quisquam cumque. Quasi non odio nesciunt."], ["image_url", "http://robohash.org/omnisipsaillum.png?size=300x300"], ["created_at", "2015-05-30 02:23:58.277275"], ["updated_at", "2015-05-30 02:23:58.277275"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by CatsController#index as HTML
+  Rendered cats/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 26ms (Views: 25.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cats" ("name", "life_story", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Zora Kohler"], ["life_story", "Facilis facere vel consequatur dolor quas debitis sunt. Cumque fugit aliquid enim architecto tenetur eligendi autem. Reiciendis vel numquam molestiae ullam assumenda eum quo. Nam dolor esse dolorem impedit quisquam cumque. Quasi non odio nesciunt."], ["image_url", "http://robohash.org/omnisipsaillum.png?size=300x300"], ["created_at", "2015-05-30 02:23:58.321157"], ["updated_at", "2015-05-30 02:23:58.321157"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "cats" ("name", "life_story", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Zora Kohler"], ["life_story", "Facilis facere vel consequatur dolor quas debitis sunt. Cumque fugit aliquid enim architecto tenetur eligendi autem. Reiciendis vel numquam molestiae ullam assumenda eum quo. Nam dolor esse dolorem impedit quisquam cumque. Quasi non odio nesciunt."], ["image_url", "http://robohash.org/omnisipsaillum.png?size=300x300"], ["created_at", "2015-05-30 02:23:58.323253"], ["updated_at", "2015-05-30 02:23:58.323253"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "cats" ("name", "life_story", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Zora Kohler"], ["life_story", "Facilis facere vel consequatur dolor quas debitis sunt. Cumque fugit aliquid enim architecto tenetur eligendi autem. Reiciendis vel numquam molestiae ullam assumenda eum quo. Nam dolor esse dolorem impedit quisquam cumque. Quasi non odio nesciunt."], ["image_url", "http://robohash.org/omnisipsaillum.png?size=300x300"], ["created_at", "2015-05-30 02:23:58.324887"], ["updated_at", "2015-05-30 02:23:58.324887"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "cats" ("name", "life_story", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Zora Kohler"], ["life_story", "Facilis facere vel consequatur dolor quas debitis sunt. Cumque fugit aliquid enim architecto tenetur eligendi autem. Reiciendis vel numquam molestiae ullam assumenda eum quo. Nam dolor esse dolorem impedit quisquam cumque. Quasi non odio nesciunt."], ["image_url", "http://robohash.org/omnisipsaillum.png?size=300x300"], ["created_at", "2015-05-30 02:23:58.326468"], ["updated_at", "2015-05-30 02:23:58.326468"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cats" ("name", "life_story", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Zora Kohler"], ["life_story", "Facilis facere vel consequatur dolor quas debitis sunt. Cumque fugit aliquid enim architecto tenetur eligendi autem. Reiciendis vel numquam molestiae ullam assumenda eum quo. Nam dolor esse dolorem impedit quisquam cumque. Quasi non odio nesciunt."], ["image_url", "http://robohash.org/omnisipsaillum.png?size=300x300"], ["created_at", "2015-05-30 02:23:58.330174"], ["updated_at", "2015-05-30 02:23:58.330174"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by CatsController#index as HTML
+  Rendered cats/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "cats" ("name", "life_story", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Zora Kohler"], ["life_story", "Facilis facere vel consequatur dolor quas debitis sunt. Cumque fugit aliquid enim architecto tenetur eligendi autem. Reiciendis vel numquam molestiae ullam assumenda eum quo. Nam dolor esse dolorem impedit quisquam cumque. Quasi non odio nesciunt."], ["image_url", "http://robohash.org/omnisipsaillum.png?size=300x300"], ["created_at", "2015-05-30 02:23:58.336865"], ["updated_at", "2015-05-30 02:23:58.336865"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cats" ("name", "life_story", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Zora Kohler"], ["life_story", "Facilis facere vel consequatur dolor quas debitis sunt. Cumque fugit aliquid enim architecto tenetur eligendi autem. Reiciendis vel numquam molestiae ullam assumenda eum quo. Nam dolor esse dolorem impedit quisquam cumque. Quasi non odio nesciunt."], ["image_url", "http://robohash.org/omnisipsaillum.png?size=300x300"], ["created_at", "2015-05-30 02:23:58.338856"], ["updated_at", "2015-05-30 02:23:58.338856"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "cats" ("name", "life_story", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Zora Kohler"], ["life_story", "Facilis facere vel consequatur dolor quas debitis sunt. Cumque fugit aliquid enim architecto tenetur eligendi autem. Reiciendis vel numquam molestiae ullam assumenda eum quo. Nam dolor esse dolorem impedit quisquam cumque. Quasi non odio nesciunt."], ["image_url", "http://robohash.org/omnisipsaillum.png?size=300x300"], ["created_at", "2015-05-30 02:23:58.340453"], ["updated_at", "2015-05-30 02:23:58.340453"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cats" ("name", "life_story", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Zora Kohler"], ["life_story", "Facilis facere vel consequatur dolor quas debitis sunt. Cumque fugit aliquid enim architecto tenetur eligendi autem. Reiciendis vel numquam molestiae ullam assumenda eum quo. Nam dolor esse dolorem impedit quisquam cumque. Quasi non odio nesciunt."], ["image_url", "http://robohash.org/omnisipsaillum.png?size=300x300"], ["created_at", "2015-05-30 02:23:58.341981"], ["updated_at", "2015-05-30 02:23:58.341981"]]
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "cats" ("name", "life_story", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Zora Kohler"], ["life_story", "Facilis facere vel consequatur dolor quas debitis sunt. Cumque fugit aliquid enim architecto tenetur eligendi autem. Reiciendis vel numquam molestiae ullam assumenda eum quo. Nam dolor esse dolorem impedit quisquam cumque. Quasi non odio nesciunt."], ["image_url", "http://robohash.org/omnisipsaillum.png?size=300x300"], ["created_at", "2015-05-30 02:23:58.361710"], ["updated_at", "2015-05-30 02:23:58.361710"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by CatsController#index as HTML
+  Rendered cats/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cats" ("name", "life_story", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Zora Kohler"], ["life_story", "Facilis facere vel consequatur dolor quas debitis sunt. Cumque fugit aliquid enim architecto tenetur eligendi autem. Reiciendis vel numquam molestiae ullam assumenda eum quo. Nam dolor esse dolorem impedit quisquam cumque. Quasi non odio nesciunt."], ["image_url", "http://robohash.org/omnisipsaillum.png?size=300x300"], ["created_at", "2015-05-30 02:23:58.395710"], ["updated_at", "2015-05-30 02:23:58.395710"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mCat Load (0.3ms)[0m  [1mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT 1[0m  [["id", 16]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "cats" SET "lives" = $1, "updated_at" = $2 WHERE "cats"."id" = $3[0m  [["lives", 8], ["updated_at", "2015-05-30 02:23:58.422839"], ["id", 16]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  Rendered cats/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 46ms (Views: 18.9ms | ActiveRecord: 0.8ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "cats" ("name", "life_story", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Zora Kohler"], ["life_story", "Facilis facere vel consequatur dolor quas debitis sunt. Cumque fugit aliquid enim architecto tenetur eligendi autem. Reiciendis vel numquam molestiae ullam assumenda eum quo. Nam dolor esse dolorem impedit quisquam cumque. Quasi non odio nesciunt."], ["image_url", "http://robohash.org/omnisipsaillum.png?size=300x300"], ["created_at", "2015-05-30 02:23:58.448313"], ["updated_at", "2015-05-30 02:23:58.448313"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[35mCat Load (0.4ms)[0m  SELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT 1  [["id", 17]]
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "cats" SET "lives" = $1, "updated_at" = $2 WHERE "cats"."id" = $3  [["lives", 8], ["updated_at", "2015-05-30 02:23:58.453621"], ["id", 17]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  Rendered cats/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 6ms (Views: 1.1ms | ActiveRecord: 1.0ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cats" ("name", "life_story", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Zora Kohler"], ["life_story", "Facilis facere vel consequatur dolor quas debitis sunt. Cumque fugit aliquid enim architecto tenetur eligendi autem. Reiciendis vel numquam molestiae ullam assumenda eum quo. Nam dolor esse dolorem impedit quisquam cumque. Quasi non odio nesciunt."], ["image_url", "http://robohash.org/omnisipsaillum.png?size=300x300"], ["created_at", "2015-05-30 02:23:58.460586"], ["updated_at", "2015-05-30 02:23:58.460586"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mCat Load (0.3ms)[0m  [1mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT 1[0m  [["id", 18]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "cats" SET "lives" = $1, "updated_at" = $2 WHERE "cats"."id" = $3[0m  [["lives", 8], ["updated_at", "2015-05-30 02:23:58.465229"], ["id", 18]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  Rendered cats/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 4ms (Views: 1.0ms | ActiveRecord: 0.7ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "cats" ("name", "life_story", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Zora Kohler"], ["life_story", "Facilis facere vel consequatur dolor quas debitis sunt. Cumque fugit aliquid enim architecto tenetur eligendi autem. Reiciendis vel numquam molestiae ullam assumenda eum quo. Nam dolor esse dolorem impedit quisquam cumque. Quasi non odio nesciunt."], ["image_url", "http://robohash.org/omnisipsaillum.png?size=300x300"], ["created_at", "2015-05-30 02:23:58.473032"], ["updated_at", "2015-05-30 02:23:58.473032"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mCat Load (0.3ms)[0m  SELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT 1  [["id", 19]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "cats" SET "lives" = $1, "updated_at" = $2 WHERE "cats"."id" = $3  [["lives", 8], ["updated_at", "2015-05-30 02:23:58.477892"], ["id", 19]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  Rendered cats/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 5ms (Views: 1.3ms | ActiveRecord: 0.9ms)
+  [1m[35mCat Load (0.3ms)[0m  SELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT 1  [["id", 19]]
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by CatsController#new as HTML
+  Rendered cats/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 21ms (Views: 20.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by CatsController#new as HTML
+  Rendered cats/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by CatsController#new as HTML
+  Rendered cats/new.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"name"=>"Zora Kohler", "life_story"=>"Facilis facere vel consequatur dolor quas debitis sunt. Cumque fugit aliquid enim architecto tenetur eligendi autem. Reiciendis vel numquam molestiae ullam assumenda eum quo. Nam dolor esse dolorem impedit quisquam cumque. Quasi non odio nesciunt.", "image_url"=>"http://robohash.org/omnisipsaillum.png?size=300x300"}}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "cats" ("name", "life_story", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Zora Kohler"], ["life_story", "Facilis facere vel consequatur dolor quas debitis sunt. Cumque fugit aliquid enim architecto tenetur eligendi autem. Reiciendis vel numquam molestiae ullam assumenda eum quo. Nam dolor esse dolorem impedit quisquam cumque. Quasi non odio nesciunt."], ["image_url", "http://robohash.org/omnisipsaillum.png?size=300x300"], ["created_at", "2015-05-30 02:23:58.526180"], ["updated_at", "2015-05-30 02:23:58.526180"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/cats/20
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"name"=>"Zora Kohler", "life_story"=>"Facilis facere vel consequatur dolor quas debitis sunt. Cumque fugit aliquid enim architecto tenetur eligendi autem. Reiciendis vel numquam molestiae ullam assumenda eum quo. Nam dolor esse dolorem impedit quisquam cumque. Quasi non odio nesciunt.", "image_url"=>"http://robohash.org/omnisipsaillum.png?size=300x300"}}
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "cats" ("name", "life_story", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Zora Kohler"], ["life_story", "Facilis facere vel consequatur dolor quas debitis sunt. Cumque fugit aliquid enim architecto tenetur eligendi autem. Reiciendis vel numquam molestiae ullam assumenda eum quo. Nam dolor esse dolorem impedit quisquam cumque. Quasi non odio nesciunt."], ["image_url", "http://robohash.org/omnisipsaillum.png?size=300x300"], ["created_at", "2015-05-30 02:23:58.534183"], ["updated_at", "2015-05-30 02:23:58.534183"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/cats/21
+Completed 302 Found in 6ms (ActiveRecord: 0.7ms)
+  [1m[36mCat Load (11.9ms)[0m  [1mSELECT  "cats".* FROM "cats" WHERE "cats"."name" = $1 AND "cats"."life_story" = $2 AND "cats"."image_url" = $3 LIMIT 1[0m  [["name", "Zora Kohler"], ["life_story", "Facilis facere vel consequatur dolor quas debitis sunt. Cumque fugit aliquid enim architecto tenetur eligendi autem. Reiciendis vel numquam molestiae ullam assumenda eum quo. Nam dolor esse dolorem impedit quisquam cumque. Quasi non odio nesciunt."], ["image_url", "http://robohash.org/omnisipsaillum.png?size=300x300"]]
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"name"=>"Zora Kohler", "life_story"=>"Facilis facere vel consequatur dolor quas debitis sunt. Cumque fugit aliquid enim architecto tenetur eligendi autem. Reiciendis vel numquam molestiae ullam assumenda eum quo. Nam dolor esse dolorem impedit quisquam cumque. Quasi non odio nesciunt.", "image_url"=>"http://robohash.org/omnisipsaillum.png?size=300x300"}}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cats" ("name", "life_story", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Zora Kohler"], ["life_story", "Facilis facere vel consequatur dolor quas debitis sunt. Cumque fugit aliquid enim architecto tenetur eligendi autem. Reiciendis vel numquam molestiae ullam assumenda eum quo. Nam dolor esse dolorem impedit quisquam cumque. Quasi non odio nesciunt."], ["image_url", "http://robohash.org/omnisipsaillum.png?size=300x300"], ["created_at", "2015-05-30 02:23:58.566739"], ["updated_at", "2015-05-30 02:23:58.566739"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/cats/22
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+  [1m[36mCat Load (0.3ms)[0m  [1mSELECT  "cats".* FROM "cats" LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"name"=>"test"}}
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (4.7ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  Rendered cats/new.html.erb within layouts/application (0.4ms)
+Completed 400 Bad Request in 10ms (Views: 1.7ms | ActiveRecord: 4.9ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"name"=>"test"}}
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  Rendered cats/new.html.erb within layouts/application (0.2ms)
+Completed 400 Bad Request in 4ms (Views: 1.0ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"name"=>"test"}}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  Rendered cats/new.html.erb within layouts/application (0.3ms)
+Completed 400 Bad Request in 4ms (Views: 1.0ms | ActiveRecord: 0.2ms)
+  [1m[35mCat Load (0.2ms)[0m  SELECT  "cats".* FROM "cats" WHERE "cats"."name" = $1 LIMIT 1  [["name", "test"]]
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "cats" ("name", "life_story", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Zora Kohler"], ["life_story", "Facilis facere vel consequatur dolor quas debitis sunt. Cumque fugit aliquid enim architecto tenetur eligendi autem. Reiciendis vel numquam molestiae ullam assumenda eum quo. Nam dolor esse dolorem impedit quisquam cumque. Quasi non odio nesciunt."], ["image_url", "http://robohash.org/omnisipsaillum.png?size=300x300"], ["created_at", "2015-05-30 02:23:58.607012"], ["updated_at", "2015-05-30 02:23:58.607012"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by CatsController#edit as HTML
+  Parameters: {"id"=>"23"}
+  [1m[35mCat Load (0.3ms)[0m  SELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT 1  [["id", 23]]
+  Rendered cats/edit.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 14ms (Views: 12.9ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "cats" ("name", "life_story", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Zora Kohler"], ["life_story", "Facilis facere vel consequatur dolor quas debitis sunt. Cumque fugit aliquid enim architecto tenetur eligendi autem. Reiciendis vel numquam molestiae ullam assumenda eum quo. Nam dolor esse dolorem impedit quisquam cumque. Quasi non odio nesciunt."], ["image_url", "http://robohash.org/omnisipsaillum.png?size=300x300"], ["created_at", "2015-05-30 02:23:58.628162"], ["updated_at", "2015-05-30 02:23:58.628162"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by CatsController#edit as HTML
+  Parameters: {"id"=>"24"}
+  [1m[35mCat Load (0.1ms)[0m  SELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT 1  [["id", 24]]
+  Rendered cats/edit.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "cats" ("name", "life_story", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Zora Kohler"], ["life_story", "Facilis facere vel consequatur dolor quas debitis sunt. Cumque fugit aliquid enim architecto tenetur eligendi autem. Reiciendis vel numquam molestiae ullam assumenda eum quo. Nam dolor esse dolorem impedit quisquam cumque. Quasi non odio nesciunt."], ["image_url", "http://robohash.org/omnisipsaillum.png?size=300x300"], ["created_at", "2015-05-30 02:23:58.636009"], ["updated_at", "2015-05-30 02:23:58.636009"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by CatsController#edit as HTML
+  Parameters: {"id"=>"25"}
+  [1m[35mCat Load (0.2ms)[0m  SELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT 1  [["id", 25]]
+  Rendered cats/edit.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "cats" ("name", "life_story", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Zora Kohler"], ["life_story", "Facilis facere vel consequatur dolor quas debitis sunt. Cumque fugit aliquid enim architecto tenetur eligendi autem. Reiciendis vel numquam molestiae ullam assumenda eum quo. Nam dolor esse dolorem impedit quisquam cumque. Quasi non odio nesciunt."], ["image_url", "http://robohash.org/omnisipsaillum.png?size=300x300"], ["created_at", "2015-05-30 02:23:58.645470"], ["updated_at", "2015-05-30 02:23:58.645470"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by CatsController#update as HTML
+  Parameters: {"cat"=>{"name"=>"Zora Kohler", "life_story"=>"Facilis facere vel consequatur dolor quas debitis sunt. Cumque fugit aliquid enim architecto tenetur eligendi autem. Reiciendis vel numquam molestiae ullam assumenda eum quo. Nam dolor esse dolorem impedit quisquam cumque. Quasi non odio nesciunt.", "image_url"=>"http://robohash.org/omnisipsaillum.png?size=300x300"}, "id"=>"26"}
+  [1m[35mCat Load (0.2ms)[0m  SELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT 1  [["id", 26]]
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/cats/26
+Completed 302 Found in 4ms (ActiveRecord: 0.5ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "cats" ("name", "life_story", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Zora Kohler"], ["life_story", "Facilis facere vel consequatur dolor quas debitis sunt. Cumque fugit aliquid enim architecto tenetur eligendi autem. Reiciendis vel numquam molestiae ullam assumenda eum quo. Nam dolor esse dolorem impedit quisquam cumque. Quasi non odio nesciunt."], ["image_url", "http://robohash.org/omnisipsaillum.png?size=300x300"], ["created_at", "2015-05-30 02:23:58.707464"], ["updated_at", "2015-05-30 02:23:58.707464"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by CatsController#update as HTML
+  Parameters: {"cat"=>{"name"=>"Zora Kohler", "life_story"=>"Facilis facere vel consequatur dolor quas debitis sunt. Cumque fugit aliquid enim architecto tenetur eligendi autem. Reiciendis vel numquam molestiae ullam assumenda eum quo. Nam dolor esse dolorem impedit quisquam cumque. Quasi non odio nesciunt.", "image_url"=>"http://robohash.org/omnisipsaillum.png?size=300x300"}, "id"=>"27"}
+  [1m[35mCat Load (0.2ms)[0m  SELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT 1  [["id", 27]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/cats/27
+Completed 302 Found in 3ms (ActiveRecord: 0.5ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "cats" ("name", "life_story", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Zora Kohler"], ["life_story", "Facilis facere vel consequatur dolor quas debitis sunt. Cumque fugit aliquid enim architecto tenetur eligendi autem. Reiciendis vel numquam molestiae ullam assumenda eum quo. Nam dolor esse dolorem impedit quisquam cumque. Quasi non odio nesciunt."], ["image_url", "http://robohash.org/omnisipsaillum.png?size=300x300"], ["created_at", "2015-05-30 02:23:58.717723"], ["updated_at", "2015-05-30 02:23:58.717723"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by CatsController#update as HTML
+  Parameters: {"cat"=>{"name"=>"Zora Kohler", "life_story"=>"Facilis facere vel consequatur dolor quas debitis sunt. Cumque fugit aliquid enim architecto tenetur eligendi autem. Reiciendis vel numquam molestiae ullam assumenda eum quo. Nam dolor esse dolorem impedit quisquam cumque. Quasi non odio nesciunt.", "image_url"=>"http://robohash.org/omnisipsaillum.png?size=300x300"}, "id"=>"28"}
+  [1m[35mCat Load (0.3ms)[0m  SELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT 1  [["id", 28]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/cats/28
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+  [1m[36mCat Load (0.2ms)[0m  [1mSELECT  "cats".* FROM "cats" WHERE "cats"."name" = $1 AND "cats"."life_story" = $2 AND "cats"."image_url" = $3 LIMIT 1[0m  [["name", "Zora Kohler"], ["life_story", "Facilis facere vel consequatur dolor quas debitis sunt. Cumque fugit aliquid enim architecto tenetur eligendi autem. Reiciendis vel numquam molestiae ullam assumenda eum quo. Nam dolor esse dolorem impedit quisquam cumque. Quasi non odio nesciunt."], ["image_url", "http://robohash.org/omnisipsaillum.png?size=300x300"]]
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cats" ("name", "life_story", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Zora Kohler"], ["life_story", "Facilis facere vel consequatur dolor quas debitis sunt. Cumque fugit aliquid enim architecto tenetur eligendi autem. Reiciendis vel numquam molestiae ullam assumenda eum quo. Nam dolor esse dolorem impedit quisquam cumque. Quasi non odio nesciunt."], ["image_url", "http://robohash.org/omnisipsaillum.png?size=300x300"], ["created_at", "2015-05-30 02:23:58.728524"], ["updated_at", "2015-05-30 02:23:58.728524"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by CatsController#update as HTML
+  Parameters: {"cat"=>{"name"=>"", "life_story"=>"", "image_url"=>""}, "id"=>"29"}
+  [1m[36mCat Load (0.2ms)[0m  [1mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT 1[0m  [["id", 29]]
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  Rendered cats/edit.html.erb within layouts/application (0.3ms)
+Completed 400 Bad Request in 9ms (Views: 1.4ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "cats" ("name", "life_story", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Zora Kohler"], ["life_story", "Facilis facere vel consequatur dolor quas debitis sunt. Cumque fugit aliquid enim architecto tenetur eligendi autem. Reiciendis vel numquam molestiae ullam assumenda eum quo. Nam dolor esse dolorem impedit quisquam cumque. Quasi non odio nesciunt."], ["image_url", "http://robohash.org/omnisipsaillum.png?size=300x300"], ["created_at", "2015-05-30 02:23:58.743810"], ["updated_at", "2015-05-30 02:23:58.743810"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by CatsController#update as HTML
+  Parameters: {"cat"=>{"name"=>"", "life_story"=>"", "image_url"=>""}, "id"=>"30"}
+  [1m[36mCat Load (0.2ms)[0m  [1mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT 1[0m  [["id", 30]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  Rendered cats/edit.html.erb within layouts/application (0.2ms)
+Completed 400 Bad Request in 5ms (Views: 0.9ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cats" ("name", "life_story", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Zora Kohler"], ["life_story", "Facilis facere vel consequatur dolor quas debitis sunt. Cumque fugit aliquid enim architecto tenetur eligendi autem. Reiciendis vel numquam molestiae ullam assumenda eum quo. Nam dolor esse dolorem impedit quisquam cumque. Quasi non odio nesciunt."], ["image_url", "http://robohash.org/omnisipsaillum.png?size=300x300"], ["created_at", "2015-05-30 02:23:58.756036"], ["updated_at", "2015-05-30 02:23:58.756036"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by CatsController#update as HTML
+  Parameters: {"cat"=>{"name"=>"", "life_story"=>"", "image_url"=>""}, "id"=>"31"}
+  [1m[36mCat Load (0.2ms)[0m  [1mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT 1[0m  [["id", 31]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  Rendered cats/edit.html.erb within layouts/application (0.2ms)
+Completed 400 Bad Request in 5ms (Views: 1.0ms | ActiveRecord: 0.4ms)
+  [1m[35mCat Load (0.3ms)[0m  SELECT  "cats".* FROM "cats" WHERE "cats"."name" = $1 AND "cats"."life_story" = $2 AND "cats"."image_url" = $3 LIMIT 1  [["name", ""], ["life_story", ""], ["image_url", ""]]
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m

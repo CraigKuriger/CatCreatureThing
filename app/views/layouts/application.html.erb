@@ -29,19 +29,13 @@
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="#">Gangster Cats!</a>
+              <p><%= link_to 'Gangster Cats!', cats_path, class:"navbar-brand" %></p>
           </div>
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
               <ul class="nav navbar-nav">
                   <li>
                       <%= link_to('New Cat', new_cat_path) %>
-                  </li>
-                  <li>
-                      <a href="#services">Services</a>
-                  </li>
-                  <li>
-                      <a href="#contact">Contact</a>
                   </li>
               </ul>
           </div>
