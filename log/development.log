@@ -1,0 +1,1177 @@
+
+
+Started GET "/" for ::1 at 2015-05-30 12:42:36 +1200
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/railties-4.2.1/lib/rails/templates/rails/welcome/index.html.erb (1.9ms)
+Completed 200 OK in 56ms (Views: 37.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (44.2ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (1.4ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateCats (20150530010356)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (5.3ms)[0m  [1mCREATE TABLE "cats" ("id" serial primary key, "name" character varying, "life_story" text, "image_url" character varying, "lives" integer DEFAULT 9, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150530010356"]]
+  [1m[36m (15.8ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (3.9ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'cats'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (51.3ms)[0m  [1mINSERT INTO "cats" ("name", "life_story", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Sigrid Sipes"], ["life_story", "Enim est facilis aut. Ut totam nesciunt. A ut qui aspernatur non vel mollitia."], ["image_url", "http://robohash.org/delectusminimaenim.png?size=300x300"], ["created_at", "2015-05-30 01:19:33.588302"], ["updated_at", "2015-05-30 01:19:33.588302"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "cats" ("name", "life_story", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Bertha Hettinger"], ["life_story", "Velit temporibus et quo reprehenderit facere nemo illo. Officiis facere voluptate natus et iusto ea praesentium. Velit dolore porro voluptas. Qui consectetur autem voluptate fuga eligendi harum."], ["image_url", "http://robohash.org/sapientequaeratnulla.png?size=300x300"], ["created_at", "2015-05-30 01:19:33.647022"], ["updated_at", "2015-05-30 01:19:33.647022"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cats" ("name", "life_story", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Berneice Berge"], ["life_story", "Impedit voluptas alias voluptatem atque consequatur sed. Voluptatem tempora quia consequatur fugiat. Esse incidunt ipsam fugiat qui."], ["image_url", "http://robohash.org/suntetsed.png?size=300x300"], ["created_at", "2015-05-30 01:19:33.649903"], ["updated_at", "2015-05-30 01:19:33.649903"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "cats" ("name", "life_story", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Zaria Mitchell MD"], ["life_story", "Quidem rerum commodi facilis ab beatae voluptates. Quas unde ipsa architecto et. Repellendus eaque possimus quia voluptatem."], ["image_url", "http://robohash.org/fugitrepellendusexplicabo.png?size=300x300"], ["created_at", "2015-05-30 01:19:33.652307"], ["updated_at", "2015-05-30 01:19:33.652307"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cats" ("name", "life_story", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Liza Haley"], ["life_story", "Dolor quibusdam cupiditate eligendi quam quo autem aliquam. Sit repellat ad expedita. Occaecati deleniti et iusto cupiditate voluptatum dignissimos. Delectus eius dolores."], ["image_url", "http://robohash.org/quiadoloresoptio.png?size=300x300"], ["created_at", "2015-05-30 01:19:33.654689"], ["updated_at", "2015-05-30 01:19:33.654689"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "cats" ("name", "life_story", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Reymundo Hammes"], ["life_story", "Debitis dolores rerum. Consequatur tempore recusandae rerum. Omnis eius hic omnis quis fugit. Quos earum eligendi quia."], ["image_url", "http://robohash.org/animiipsamaut.png?size=300x300"], ["created_at", "2015-05-30 01:19:33.657004"], ["updated_at", "2015-05-30 01:19:33.657004"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cats" ("name", "life_story", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Mark Mosciski"], ["life_story", "Quos amet suscipit. Velit id in accusamus quidem. Eos a aspernatur tenetur eveniet."], ["image_url", "http://robohash.org/automnisblanditiis.png?size=300x300"], ["created_at", "2015-05-30 01:19:33.659048"], ["updated_at", "2015-05-30 01:19:33.659048"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "cats" ("name", "life_story", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Euna Okuneva"], ["life_story", "Dolor eum non dolores sit laudantium nemo necessitatibus. Vitae odio exercitationem voluptatem et aliquam. Dolores voluptatem possimus minus occaecati. Est similique natus non doloribus."], ["image_url", "http://robohash.org/laborequisquamin.png?size=300x300"], ["created_at", "2015-05-30 01:19:33.661180"], ["updated_at", "2015-05-30 01:19:33.661180"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "cats" ("name", "life_story", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Donald Champlin MD"], ["life_story", "Est omnis deserunt cupiditate quos qui consequatur molestiae. Aliquam earum sit consectetur corporis. Rerum aliquid quasi."], ["image_url", "http://robohash.org/itaquealiquidreiciendis.png?size=300x300"], ["created_at", "2015-05-30 01:19:33.663154"], ["updated_at", "2015-05-30 01:19:33.663154"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "cats" ("name", "life_story", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Dianna Schowalter"], ["life_story", "Ut delectus quis tenetur voluptatum. Dolore amet rem et velit. Non ipsum est excepturi ullam quis. Vitae dolorum quo error magnam est voluptas est."], ["image_url", "http://robohash.org/quiaomnisea.png?size=300x300"], ["created_at", "2015-05-30 01:19:33.665058"], ["updated_at", "2015-05-30 01:19:33.665058"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+
+
+Started GET "/" for ::1 at 2015-05-30 13:25:23 +1200
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CatsController#index as HTML
+  [1m[35mCat Load (0.5ms)[0m  SELECT "cats".* FROM "cats"
+  Rendered cats/index.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 2371ms (Views: 2364.4ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/assets/cats.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-30 13:25:25 +1200
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-30 13:25:26 +1200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-30 13:25:26 +1200
+
+
+Started GET "/assets/cats.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-30 13:25:26 +1200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-05-30 13:25:26 +1200
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-30 13:25:26 +1200
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-05-30 13:25:26 +1200
+
+
+Started GET "/" for ::1 at 2015-05-30 13:31:35 +1200
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (0.3ms)[0m  [1mSELECT "cats".* FROM "cats"[0m
+  Rendered cats/index.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 40ms (Views: 34.5ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-05-30 13:31:35 +1200
+
+
+Started GET "/assets/cats.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-30 13:31:35 +1200
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-30 13:31:35 +1200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-30 13:31:35 +1200
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-30 13:31:35 +1200
+
+
+Started GET "/assets/cats.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-30 13:31:35 +1200
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-05-30 13:31:35 +1200
+
+
+Started GET "/cats/1" for ::1 at 2015-05-30 13:31:41 +1200
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCat Load (0.3ms)[0m  SELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 500 Internal Server Error in 78ms (ActiveRecord: 0.5ms)
+
+ActionView::MissingTemplate (Missing template cats/show, application/show with {:locale=>[:en], :formats=>[:html, :xml], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/apprentice/Documents/craig/CatCreatureThing/app/views"
+):
+  actionview (4.2.1) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.2.1) lib/action_view/lookup_context.rb:121:in `find'
+  actionview (4.2.1) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.2.1) lib/action_view/renderer/template_renderer.rb:40:in `determine_template'
+  actionview (4.2.1) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.2.1) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.2.1) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.2.1) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.1) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.1) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.1) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.1) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.1) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.1) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.1) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.1) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/benchmark.rb:296:in `realtime'
+  activesupport (4.2.1) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.1) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.1) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.1) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.1) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.1) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.1) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.1) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.1) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.1) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:92:in `_run_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:776:in `_run_process_action_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.1) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.1) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.1) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.1) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.1) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.1) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.1) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.1) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.1) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.1) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.1) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.1) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:74:in `call'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:819:in `call'
+  rack (1.6.1) lib/rack/etag.rb:24:in `call'
+  rack (1.6.1) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.1) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.1) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.1) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.1) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:649:in `call'
+  activerecord (4.2.1) lib/active_record/migration.rb:378:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:776:in `_run_call_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.9ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.9ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (52.7ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (22.1ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (54.0ms)
+
+
+Started GET "/cats/1" for ::1 at 2015-05-30 13:31:41 +1200
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.3ms)[0m  [1mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.3ms)
+
+ActionView::MissingTemplate (Missing template cats/show, application/show with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/apprentice/Documents/craig/CatCreatureThing/app/views"
+):
+  actionview (4.2.1) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.2.1) lib/action_view/lookup_context.rb:121:in `find'
+  actionview (4.2.1) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.2.1) lib/action_view/renderer/template_renderer.rb:40:in `determine_template'
+  actionview (4.2.1) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.2.1) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.2.1) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.2.1) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.1) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.1) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.1) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.1) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.1) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.1) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.1) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.1) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/benchmark.rb:296:in `realtime'
+  activesupport (4.2.1) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.1) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.1) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.1) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.1) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.1) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.1) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.1) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.1) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.1) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:92:in `_run_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:776:in `_run_process_action_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.1) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.1) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.1) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.1) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.1) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.1) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.1) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.1) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.1) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.1) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.1) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.1) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:74:in `call'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:819:in `call'
+  rack (1.6.1) lib/rack/etag.rb:24:in `call'
+  rack (1.6.1) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.1) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.1) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.1) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.1) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:649:in `call'
+  activerecord (4.2.1) lib/active_record/migration.rb:378:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:776:in `_run_call_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.8ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (25.8ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (14.8ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (32.4ms)
+
+
+Started GET "/cats/1" for ::1 at 2015-05-30 13:33:05 +1200
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCat Load (0.3ms)[0m  SELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.3ms)
+
+ActionView::MissingTemplate (Missing template cats/show, application/show with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/apprentice/Documents/craig/CatCreatureThing/app/views"
+):
+  actionview (4.2.1) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.2.1) lib/action_view/lookup_context.rb:121:in `find'
+  actionview (4.2.1) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.2.1) lib/action_view/renderer/template_renderer.rb:40:in `determine_template'
+  actionview (4.2.1) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.2.1) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.2.1) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.2.1) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.1) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.1) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.1) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.1) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.1) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.1) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.1) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.1) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/benchmark.rb:296:in `realtime'
+  activesupport (4.2.1) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.1) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.1) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.1) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.1) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.1) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.1) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.1) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.1) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.1) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:92:in `_run_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:776:in `_run_process_action_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.1) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.1) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.1) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.1) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.1) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.1) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.1) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.1) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.1) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.1) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.1) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.1) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:74:in `call'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:819:in `call'
+  rack (1.6.1) lib/rack/etag.rb:24:in `call'
+  rack (1.6.1) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.1) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.1) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.1) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.1) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:649:in `call'
+  activerecord (4.2.1) lib/active_record/migration.rb:378:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:776:in `_run_call_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (22.8ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (15.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (34.0ms)
+
+
+Started GET "/cats/1" for ::1 at 2015-05-30 13:34:48 +1200
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.5ms)[0m  [1mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 500 Internal Server Error in 61ms (ActiveRecord: 0.5ms)
+
+ActionView::MissingTemplate (Missing template cats/show, application/show with {:locale=>[:en], :formats=>[:html, :xml], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/apprentice/Documents/craig/CatCreatureThing/app/views"
+):
+  actionview (4.2.1) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.2.1) lib/action_view/lookup_context.rb:121:in `find'
+  actionview (4.2.1) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.2.1) lib/action_view/renderer/template_renderer.rb:40:in `determine_template'
+  actionview (4.2.1) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.2.1) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.2.1) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.2.1) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.1) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.1) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.1) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.1) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.1) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.1) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.1) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.1) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/benchmark.rb:296:in `realtime'
+  activesupport (4.2.1) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.1) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.1) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.1) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.1) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.1) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.1) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.1) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.1) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.1) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:92:in `_run_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:776:in `_run_process_action_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.1) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.1) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.1) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.1) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.1) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.1) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.1) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.1) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.1) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.1) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.1) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.1) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:74:in `call'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:819:in `call'
+  rack (1.6.1) lib/rack/etag.rb:24:in `call'
+  rack (1.6.1) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.1) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.1) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.1) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.1) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:649:in `call'
+  activerecord (4.2.1) lib/active_record/migration.rb:378:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:776:in `_run_call_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (22.1ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (14.7ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (33.6ms)
+
+
+Started GET "/cats/1" for ::1 at 2015-05-30 13:34:48 +1200
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCat Load (0.3ms)[0m  SELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.3ms)
+
+ActionView::MissingTemplate (Missing template cats/show, application/show with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/apprentice/Documents/craig/CatCreatureThing/app/views"
+):
+  actionview (4.2.1) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.2.1) lib/action_view/lookup_context.rb:121:in `find'
+  actionview (4.2.1) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.2.1) lib/action_view/renderer/template_renderer.rb:40:in `determine_template'
+  actionview (4.2.1) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.2.1) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.2.1) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.2.1) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.1) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.1) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.1) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.1) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.1) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.1) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.1) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.1) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/benchmark.rb:296:in `realtime'
+  activesupport (4.2.1) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.1) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.1) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.1) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.1) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.1) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.1) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.1) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.1) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.1) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:92:in `_run_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:776:in `_run_process_action_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.1) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.1) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.1) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.1) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.1) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.1) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.1) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.1) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.1) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.1) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.1) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.1) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:74:in `call'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:819:in `call'
+  rack (1.6.1) lib/rack/etag.rb:24:in `call'
+  rack (1.6.1) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.1) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.1) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.1) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.1) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:649:in `call'
+  activerecord (4.2.1) lib/active_record/migration.rb:378:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:776:in `_run_call_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (25.8ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (77.9ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (99.8ms)
+
+
+Started GET "/cats/1" for ::1 at 2015-05-30 13:36:26 +1200
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.3ms)[0m  [1mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered cats/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 27ms (Views: 25.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/cats.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-30 13:36:26 +1200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-05-30 13:36:26 +1200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-30 13:36:26 +1200
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-30 13:36:26 +1200
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-30 13:36:26 +1200
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-05-30 13:36:26 +1200
+
+
+Started GET "/assets/cats.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-30 13:36:26 +1200
+
+
+Started GET "/cats" for ::1 at 2015-05-30 13:36:29 +1200
+Processing by CatsController#index as HTML
+  [1m[35mCat Load (0.3ms)[0m  SELECT "cats".* FROM "cats"
+  Rendered cats/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 27ms (Views: 25.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cats/1" for ::1 at 2015-05-30 13:36:30 +1200
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.2ms)[0m  [1mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered cats/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 26ms (Views: 24.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cats/1/edit" for ::1 at 2015-05-30 13:36:31 +1200
+
+AbstractController::ActionNotFound (The action 'edit' could not be found for CatsController):
+  actionpack (4.2.1) lib/abstract_controller/base.rb:132:in `process'
+  actionview (4.2.1) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.1) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.1) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.1) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:74:in `call'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:819:in `call'
+  rack (1.6.1) lib/rack/etag.rb:24:in `call'
+  rack (1.6.1) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.1) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.1) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.1) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.1) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:649:in `call'
+  activerecord (4.2.1) lib/active_record/migration.rb:378:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:776:in `_run_call_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (0.6ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (18.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (37.6ms)
+
+
+Started GET "/cats/1/edit" for ::1 at 2015-05-30 13:36:31 +1200
+
+AbstractController::ActionNotFound (The action 'edit' could not be found for CatsController):
+  actionpack (4.2.1) lib/abstract_controller/base.rb:132:in `process'
+  actionview (4.2.1) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.1) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.1) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.1) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:74:in `call'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:819:in `call'
+  rack (1.6.1) lib/rack/etag.rb:24:in `call'
+  rack (1.6.1) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.1) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.1) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.1) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.1) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:649:in `call'
+  activerecord (4.2.1) lib/active_record/migration.rb:378:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:776:in `_run_call_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (18.8ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (38.9ms)
+
+
+Started GET "/cats/1/edit" for ::1 at 2015-05-30 13:40:53 +1200
+Processing by CatsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCat Load (0.2ms)[0m  SELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered cats/edit.html.erb within layouts/application (79.4ms)
+Completed 200 OK in 175ms (Views: 162.7ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/cats.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-30 13:40:53 +1200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-05-30 13:40:53 +1200
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-30 13:40:53 +1200
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-30 13:40:53 +1200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-30 13:40:53 +1200
+
+
+Started GET "/assets/cats.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-30 13:40:53 +1200
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-05-30 13:40:53 +1200
+
+
+Started GET "/cats/1/edit" for ::1 at 2015-05-30 13:40:59 +1200
+Processing by CatsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.2ms)[0m  [1mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered cats/edit.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 26ms (Views: 24.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/cats.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-30 13:40:59 +1200
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-30 13:40:59 +1200
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-30 13:40:59 +1200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-05-30 13:40:59 +1200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-30 13:40:59 +1200
+
+
+Started GET "/assets/cats.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-30 13:40:59 +1200
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-05-30 13:40:59 +1200
+
+
+Started GET "/" for ::1 at 2015-05-30 13:41:04 +1200
+Processing by CatsController#index as HTML
+  [1m[35mCat Load (0.3ms)[0m  SELECT "cats".* FROM "cats"
+  Rendered cats/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 25ms (Views: 23.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cats/1" for ::1 at 2015-05-30 13:41:08 +1200
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.2ms)[0m  [1mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE "cats" SET "lives" = $1, "updated_at" = $2 WHERE "cats"."id" = $3[0m  [["lives", 8], ["updated_at", "2015-05-30 01:41:08.954316"], ["id", 1]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  Rendered cats/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 111ms (Views: 26.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/cats/1/edit" for ::1 at 2015-05-30 13:41:11 +1200
+Processing by CatsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.2ms)[0m  [1mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered cats/edit.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 27ms (Views: 25.9ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/cats/1" for ::1 at 2015-05-30 13:41:40 +1200
+Processing by CatsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nB2/hTUGgsUXzl0chLEgxKbOMhP9D1MODLX67faWB6gJAvTXxtTHVbbws/EYHt5QPGxEz81RlJ/jwD4t1fK7cw==", "cat"=>{"name"=>"Sigrid Sipes", "life_story"=>"Enim est facilis aut. Ut totam nesciunt. A ut qui aspernatur non vel mollitia.", "image_url"=>"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxQTEhQUExQWFRUXFhwbFxcYFxUcFxoYGBcYFxcUGhwYHCggGBwlHBQXITEhJSksLi4uFx8zODMsNygtLiwBCgoKDg0OGhAQGiwkHyQsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsNzcsLCwsNywsLCwrNywsK//AABEIAO4A0wMBIgACEQEDEQH/xAAcAAACAgMBAQAAAAAAAAAAAAAEBQMGAAECBwj/xAA7EAABAwIDBQcDAgUDBQEAAAABAAIRAyEEMUEFElFhcQYigZGhsfATwdEy4RQVQnLxB1KyI2KCkqJD/8QAGQEAAwEBAQAAAAAAAAAAAAAAAQIDAAQF/8QAJREAAwEAAgIBBAIDAAAAAAAAAAECEQMhEjFRBBMiQRSRI1Jx/9oADAMBAAIRAxEAPwDzgwQoXCFIsIsuc7GQlRqV4XBWFOCjcFX0KCIWB0GVmtRtG8qZpS+niAUU2oIU2hkwkFbLkO15OQUjaBNyUrGMdWhYC45CFPTw3ASjaOBcc7IaLotbhuJUzKX+1qcUsA0Z3RDaYGQSeRhNgdnu3pNuSatpKRrbqQBDQM0ympHNWwCsLUAHGIrbrSc4VXxe1nPnMXyVs3ARBuqxtvAGm7eYO7F+SeMKQ0mC4dxjvZrbnIPeGh5kqPEYqBOpsFVTrKuklpLVxTAYOac7N2QX95/6eHFU0sMicyR7r1Ci2GgckOX8cwguRs7ptDRAEBbLlgWSoGIyViwrFugFBWNK6co11oJj2qEhEOyULgiAjXDgpFpyxgBzrZyeHBH7CqlxLc0oebnqrL2YwZ/W4Z5J+TFJCd8h5h8CTnZHUsC0c1LTEKQOXC2y5sNAFgtsWitsagY6lbErYapWtWMRsbdTbq4bmpVtMahaetl3BaIQCcscuajA4QRIW2hdExfRFGFOM2fRYC9zRACptU/UqEgQJsOCedocX9QhgNuH3KDwmEgTb1+y7JnwXfsmn5f8AMPRJr0wR/UPyvRAqbsOiXYmdGgnxyVt31DmfaGRIXLUriVqFEY7L1ijhbW0xSajYUcJjUY0MeTmB45580qbimnl1Xb4vNB5LcOpXJC2YXRathuiCFy4KRwXLgsZneytlguk3VrosgAJZspuScMF1HkptiysCKQ4qbdhRhS03ccvl1EYyF3TC5ewhT06U3+c0QmgupTql2aqkSG/0yOZmI6oWlsyoSGhpnnx4IuKMmhe1klTbnBWLFdmHMtczlbXMA8tE4wHZdppDes7P0y87plxMDeIozqZXDgr5iuzzf8A6PlEKu7V2QaYkcfsg+PDJ6V+YSvam0AGEg2nz5ei47S7S+lYA5keSru0arnMpiIEb0c3H8e66eHjU/kyVtt4iGnVLnSbzpnHkmeFrg5QPAhB4HBzN5tppKZ0sG6m2RBHjK1vWUhYsJNkMG/UMQbA8OqdNCD2Z3mkkXnn90ewLm5PYUYFohdwshTCRwtrpYiYqeKpbwVfr0S0qzVmoGvhw78rtli3OiOYUgxR1vCnrYSMkM6kQqYS0nbXBzW5Q0LA9K5GVMsuzHBN6eap2GxjhkU82XiahOcg8fVc98f7HksDKaYYHZznuDQLk2Tfs7soP/ULzkfKeaumAwbGOaQB8/BAWji32ZvCr4rslV3Guj+nycPyEz2N2RiHPOuXiR7e6uTqstPRSWAHNX+3OkfNkNSm0sjQEEdQZ+ygfTad10CZ/efnFcYl+gQH8XuuE6e6nV9jzI3xDwR80UH1ISirj+9nYXWv48T0+fdTqt7KKBpi7iQltemHBaw+0ATGhXBrgGFJ1+yikqu2uzrXiS2SGkDq51yqn2g7O3AGTWgADWBHmT7L1SoQUrxWGBMxJ05JpvAOTyStSqUYblrz/wAdUT/FEt78OtMWB/KuO09jTJEbzrknQKmbR2cGE8eP5VfLRUg/Yb+6/OC6wPTRHhAbHI3AATzTFQv2bDazcUgW0piLcWKRYgYrtWkhfpjyRzih/pSeAXagA7KG+YAnK/M/siauxQYBAmPJE7PsQf6Q4RzjP3Cs7aO81xAFzAnh+o9P3XTxpNHPyPGUEbAmcovH4SLE4Yg2Xp2JoQTllpoqhtjAD6m8MjnGhWqM7QVW+yv4bDvJgT5L0Xs92XNRnfMGJa9voHjOPuPBa7K7BqMh7RI1DmktI6i48ivUNmYdu7+ndMZSD1gjMZJfHfZnWeiLY2AIDJ7tQNE8DAift4DknuGgt8cvf7+iEY3vDl8t81RLTG9wPvkQsDSWlVgOHzSfdD4jHwWiev5QWIxe7Pzh+FXcTtGag5n0Nj6JKeIpK0f43H5xxjzH+Uh2rjocQMyT7wocXtCx6AnqCA4+cpPjcZvPceZhcvIy8oN/mcZn4JXOD2lOZ1M+Jsq7tGsRAbnr0+FcUsTIHCUmDFu2djYDicwJB8ls7QndcMilDKhFN+lvzb0QeAxf/TjgfdK0MmWsbQ5rKeNnNVcYyHROvp8Kldjb2090MCWurDhA1Vb2/ssOYSTaLAQAI4lEYHag49f2W9txVpxpqOPI8uSeWTpFE2CC2r9OWlpk2MnlzVmdTVd2Fgz/ABFR+g7otb91ZXBG/ZNGmhbIXLStOqQkCdLS19QrFsMISFGWWXReNFgXWBE2zMK6q8NbJOQHXRXkYJtGi0VO8ZJPCwHms7BbK3aT67hd0hnTUjqs2xW0dnfdbzOXrC6uNeM6TpeTKxtLaUyG2k6W1XODw4L+8JbrMRdL6tQU5c67vOP3R+zNqUyQ090lstdo7odEJpsTkWHomwsMA0bkDlp5aJ7RpDMiCkHZyiQJB7qcYjGBoTvCQRUcAUtxmPj7pPtTtEB3QRPQflIq21CZIPuo1RWZGOO2hJ6/Aq/VxRD8wDPELeIxzdSAdeCTY14M3jgdOahZ0QG7a2nD87OF+pz9b+KXbPxx3pNyb9Et2viN8CBdo8SOB5j7oLC44Ax8hT8dQ+ose0MUS13eN/bgEJsSoXvDBnI6A/4QeKxoI9k9/wBPcCX1d6LCb8zr84oJdAbHdNvfew5GZ6QY9oSdtMss7OB9x5q2Y7ZpFRsC2R6cPNVvtc806zcgCACPGSVmgTRX9qYnddMxHt8913htoFzbfOSTY7El0ibZKOnihTFz0TeHQzrsteDruA+fAmeHxwFlVcDiHvbvtaSPdTDaLgJLSOPzNI4aCnpYWw02/q8AOSmulezMcysNw+HGU3NItskaYjRFC7AWbhJsJXZYdRHWyylv0LqXs5lYui0f7mrFb+Nzf6P+if3+P5RRsJidFY+zmyziaraY1zPADM+AVNB1Xu3+mOwTQwwq1RFSoJg5tabht9TmV1THkwVWIabUqsw1JrGiA0QByC8z2ptJzqm9ORtygqz9tMYXEibBUaoDwW5+TvEdHBxrNYNtJu84wDBuOhuE37Gdly9++9ztwfpaZ4z5KPA4b6kNIuMumZHgb+JV32eBTYGiyWPkTnafQ2r12UmQ2wCr20e0rabSbk9Qo9v4s7sDNVPGYVzgb+CLvsgpWCTanah9Sp3RF1PR2xU3ms3buBO8coAmwUjNnta10DvHXMoTC0zIBs5hls6jUeISO8KTOkO2cbVZeYPRJKuLqmO/fNX3H7JGIpTTjnOYjTkVT6HZvEmoWuYQ2bnTwRmk0CtTwhxLqrT3gJ1ggjlBCFc85gqw7Voii0AHvadeKrtWAb65LJJ9m1mxibGeFl7P/pTRBo8wf3/C8Uo0C57WtBcToPP7L3X/AE2wL6VMNJBH+LfOKXkSw0t6W+vggbkfJXiv+oOPjGOIM7o3QPG/sve6je4eML587f7Lcyq9/ehzvwD4ZQpx7HEuxcCa7wyYHH5qpu1OzBQqNAbA3bSt7CqFg3mnvtcCBxEXCu2KGGxtH/rHceBnMEJ/LGak8EnYnahewUS0brC4h398WPl6qGs4PqVgLiRCnd9HDUzTw3fcc6h589ULh2bjbkAnUxeUltMbjTR1s/DgPaRmrqIIEjPVVPZ9QFwgz0Ksf8TBaCDloCtwx52kDmrxnQba2KNNrt2GyIEG/VI8VU3adNhl7nXE6JltbBvrOp91wY58SbZZuU+K2fRa9rnVS5obG6Le1178QkvxR4t1r7ZlPEU2gN3suE/hYt/x9BndFMQOqxU8qE8ZFH+mnZs4vEtc9v8A0aZDnnQkQWs8fYL2/bGLbTbAJFvDJL+yuw24HCspj9REuPF5z8svBK+0e0Jz8V5iXitPWS86Kpt3ES43SaVPiqm8SoQ0eC4KflWnoJZIfsqp3xp4K1Pp23h5fNFXdjUS54hsjqQrwcGNzgV0TPRx81fkVTE0t65CSY0XVyfhwfx+FXdr4IgzEJWhExJUByMnxyQWMosJsTbUDI+N03LBux+UpxGEIkgjpCSl0Uh9kuAxBES4gjJ2p6jVHYnaNSP1ieO7f3SOkSBw8v8AKIeS61p4/Mlz9ov0/YFiaDXO3ny880g2m9pqENEXsrNWbY8Y9hCr1XZ7iSY199FXjffYlrroZ7BoF7mbrTvax+qIuOhFwvYuz1J1NgJVJ7G7J3d2o4EGIgjrf7K/bOxLSIPitbF40PMJV3xdVztl2bbiKTwDuuDbHpefnBOaOKa3JSmqHeKmmVcHzZi6T6NR1Iy05A6jnyTnCb26DMmPma9C7fdj21YqsByvBNjxjJUL+W1WnKY4ctU1PUJGoicbg36adVxULjcGZ6hEU6J/qnwRNDDTlfkk0oS7Dw5Bki/mra5m73t2+mXml+y8NEW85TLadUMpzBJ5X+yv9K/8iOf6hbDF+N2iS1zSYOk6aGIyVfrYhoMSbX108Ut2jtSXHyS1+JnLP5xXt39QksR488Lb7HP8xGsrEl+oTdaUP5DLfZR9R7aeG09J0XlW3sWZdfVXLtVtMXA08l5vjsRvOXFy1k4elwT+yAPC2HcFCL6I3B0jNwByNj5Z+i55WnRVYOuy9E/UBv8APFektw0svOSQ9jsC2JvPC0K4CmuyViPP5b2ij7Qp7rjZCVqO8IcA7381Y9uYI5j0b9yktMkfqgdS1J6Zk9RVcVgWNda3Jwt/7CfYKA7NJEgzyZDv+OSt+LoB4iWnkQPwkb8GGuyYL6Eg+8JWh0ys47DkZNJPOfJQswZN3CI6368fFWytRdEySP8AueHDyOSH/lDqmf0wDqN4O62geijXGWnkEzKDcmje9T5IzC9nX1oLAGxxz6lWXZXZSmHNJqTEa6/dWAYWlTqW3pPG6T7bQXyaVbaGzalCk0UWh8XcNTxInVLTtX6DCXNeOW44keQXolRjZ+WQeLpsjSEK6H4qxlUw22BVpNe1xgnUEHyN1LR2rUNUU2UnuAzf3Q3pcyfJC7YwbGgFp3Rviw5lP9jOYG5pMO26SnUO9h4d4aRV729JI0voOSUbf7KNcd6mCDwTzDYsafZEh8o5pwNvTx+thSx7mua6Z4GPMqfCYK9hHzmr92jwgcJMR6pLh6DRYB3gPwErQyYFh6MfAtbaxLWUTvJ7Tpf3JR2jrgMsWHk8H3yHiQn412JyPo8hx5Bed1uZzE/dDsMZ/PJOMZSa528aZHE0t17R1h59wlr2Afpc0+YI62XemcTBSItHusRXe+OC2joD0zb2Pc4kqv7mrjA9T0CY7UrjMX9v3KR/VLjFyVy8ndHpwvx6CxiY/SI5/wBXnp4Jjs7GmRbeHOSlNBjZgy8nRuXn+FYNmYhrCACGn+0nw1J6lNCEs9R7LOBpgj2I907ISzs+6aYvPOITQq7OBkNakHCCqxtXZsGQ3Lr9lbELi6AcMls0CeFEaXj/APMdSSB6uXD9yZcaQPWT/wA4TbamzdTPh+dEkbs8gyGNaOLr/wDL7BRbaLrGMxh2ubIYwjibjyH5RNIsLYawC+gb9p90sw9aCBLqrudmjo1OsPicg0idYjyEfZPLTFfRJuBrRDYjMfnl1QmLfJmwbHRF1wTlYe5Vc2pVIJJMgaIciY0MIfjImXTyHBLq20oltPvE8chzlLO865s3h+UThmARoT7LnaOqWkSfy9tW1UzryB4hSU9mvp3p1JHBymrsAIIRVF250PplKTCj5VhJgNpQd14AdOR+ydU8Vyjoq9jaYe2RmCjMDVcAAmIt6E7Xqh43RJPI3Hhmg8PROvqZ90UacmTmddf3U7Kfik9g3EQPIaOCqHabH0yCD9J7dQ52fKYMeitu0qgY0kmF4/2wxbS8/pJ/sZMcZIv1V+OSN0CYnBU3umkTSvk4tNOdN2owkN/8oQNV9Rh3agvl3xJ6B2cdCgm1CBLTB4gR6hGM2gXDcdcaHOOo/qHqNCujCGg/1G/7HeDhHqCtIh2FH+xx/tu3qDCxbAFqqHfEzujUc+SG3STA7rZ01On9x5LHyTJsBn9gAuhWtMATZg4D+p3XSevBcies9fMCKb2NO6zP+p2p5AjIdM1cOyeClwO62OOfuqfgKDZEi/zRem9mKIAGqvx9s5OZ4XDAtgIpD4fJTOKszj0jqPgrZNlFUcCL2QdV7hkiDDeJbe90mx+HDjJNvmQRz8Txv81QdeuDcpKaaHnUKqrT+logHhmep1XLTuzGQGfXh1Rh1OR05Tr7oWpTsBxupZhTdGeA2pZrSNNfL39l3tHFUX23QbZxzgexSN4O8SOEDoMlyWmAPFN954D7a0YDBUiHG1h9lB/KRG8CoWtMePuETS3iI4JHyy/aHUv5If4fvcpUxoTbRFYbDHVMaeFHBQdfBTPkWUsLawRAwaPZQhTfRKXthAKVFTiiim0xrYrp7AnlCNlR7V1XMYe6CPEesQPFeMbTxQ3yIdEzuPggTqxwNvD1XuHaqQwm453j0yXiHaGpLzYG+Yz9M/JdMEaFf0cywkgG/FvUDMc/bJR0nSdQV1hnQ4HI88o6aqZ7WyCBbnNjqFQQh33DJxA6lYuz/wCPzwWImLfiKe8W028Yni42cTyBt0CDrw51pgWbxgZeJzPMlS0Ku6XHXdP/ANd32JXOHA3rrhPY3B5sPD5SCfAr0nYNKAPyqf2fwAcQTJ9l6DgaIAEABdPCv2edzVrGdIrtxI1XLRAQ9bERbNWOcir4kjRRuxzcjZcVCDcjzKX1gBewSOsGSGFSgHN3hcJa4AHI/NFunjHmwJPABE0qUXcRxMpXj9DeiClRnS8qV2H5ZIw1WAWIULqgfZpkDhks0kjJtix9KT4rYpaox9MWvYZLqtRkRlZSaKIFFMTCJpU10cLa67YzzU2hkyalCJDUOGTmuwSEmDEu6pGKJrluCigMkc9QVXLtxQ9RydCMD2h3mkZrxntrsd7akhpAJyj2IHuvZ64VW7W4BlSmd4Zc1aWI0eHzBImDKJB3rWufCdPnNdY2iGvIHG1vZRbttM9VUkR75GQ9VildTOgEfm60sYsjxIcRy913s50ugELmo4Rnou9iscagDQLnOB+VxJaevbxHoOwKDt1t4m+X9I/J9ldsHYcVVtjcTcadBYBWdn6ZH7LrjpHnX2wtuICiq0t7S/BBPxEZ+Smp13RI8OqPkmJ44QY3eGiV7pJvJTXFabxk+yXvv0Ua9jo5YdBI6FdOewu1/wAWWU2XCBxr4MD0Q88QfEmxdUZaoZ2Kc0QLDkpMBs4vJc9sNGQJ9UNj7THklqn7GSRoY9xzPLoFgxjpmfXyCCAUohKqYcHWB2k4yDfnyTNlUGIOfFVnCi9kZh6xbzHDkqJoVosRnIrGhw1kIHB1uDp/7Tn4JgKscY9UtSjJnYJ1sujK6bWHVdOe1IMQPQ7ypqrxohH1EyZsInmUm27hy+m4AiY1yTQlC4t0AmdE8iUeFbXw7qdRwIi86+iCYP8ABnVWTtgWuqkg56KtMb9ldPoi+ghoIEQPM/lYuQ3ksRANMTUTDsxUdvyBYDMCeX3SOr3nRxOSs/ZjcBhrSYzJdmeMcFyLo9PkZfcFiHQJaQOP5Vs2dUJbnIjwVW2fi5MQfUpxhqkHgPnFVhnJSGbsMCZOS5qvizVzUxoAQVSvOXFaml6AkcPrSTfLyUQdYdZXNQkWAzWUrm4yUnQ+Hb3wRyzSsEl10zdSmSoMPRl3VLoQx1MgTrr00SmoHEmQndV9rdFBTw5JuhT1hS6E7qPJcOpQnNWjCCrUkEwANF0G6YuZ7IWlhJInJMGwDGnyyogMjpsLbymeG2no/vc9Qh30ZNgtfShbQYOaWJpuC7e1pVeKJoYooaghlVsIZ4UprWUJcsEhBhCbQp7zSAYU9SqAb29j+FHinTcZ8FSRKPHO02E+nVdY35EDwSGheeHyyvnbjDMd3j3XDkb+KolJgEzNhpnpoqyyVo4dY6+YWLre5+n7LaoIH0KZ0u4+g/dXPs5g91snNVzZXeeMgr1szACN5xnguCqPSr2NMK2ADJ8LBOcIZzBj5xSqiBzsuzWvEIqsJudHL2g6AeqmpUB4KPZeGkbzo6XROJrQLBP67JkVYNEwuKdIBQ0H7xRDnR7JNDhzV1hbwOG3jOgWg2SeqZ06e6xbP2YFqMFz5IejmiK5n3QrDmp6MbrBCvpoglcPCZAAnusZtaygcHAgi41I9l1i2StMeQ20a+YuCm02DXDOBBKkNGc8uCFwxy4o36iOi4C1m6LhrUQWrBTShIw5QVnwjSxC12pgEFSqCFBXcGtJyHotVLdEDtGsRTdrY2KpAtFF7VY/ecQ2CORHrOSqRZeLdJ5I7a7gTIm51KXuNyqQSv4OPp8x5SsXYA5rFTRcP//Z"}, "commit"=>"Save Cat", "id"=>"1"}
+  [1m[35mCat Load (0.3ms)[0m  SELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (45.6ms)[0m  UPDATE "cats" SET "image_url" = $1, "updated_at" = $2 WHERE "cats"."id" = $3  [["image_url", "data:image/jpeg;base64,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"], ["updated_at", "2015-05-30 01:41:41.029327"], ["id", 1]]
+  [1m[36m (15.6ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/cats/1
+Completed 302 Found in 71ms (ActiveRecord: 61.6ms)
+
+
+Started GET "/cats/1" for ::1 at 2015-05-30 13:41:41 +1200
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCat Load (0.2ms)[0m  SELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "cats" SET "lives" = $1, "updated_at" = $2 WHERE "cats"."id" = $3  [["lives", 7], ["updated_at", "2015-05-30 01:41:41.108294"], ["id", 1]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  Rendered cats/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 96ms (Views: 92.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/cats" for ::1 at 2015-05-30 13:41:43 +1200
+Processing by CatsController#index as HTML
+  [1m[35mCat Load (0.4ms)[0m  SELECT "cats".* FROM "cats"
+  Rendered cats/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 27ms (Views: 25.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/cats/2" for ::1 at 2015-05-30 13:41:52 +1200
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCat Load (0.5ms)[0m  [1mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "cats" SET "lives" = $1, "updated_at" = $2 WHERE "cats"."id" = $3[0m  [["lives", 8], ["updated_at", "2015-05-30 01:41:52.561417"], ["id", 2]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  Rendered cats/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 30ms (Views: 24.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/cats" for ::1 at 2015-05-30 13:41:56 +1200
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (0.4ms)[0m  [1mSELECT "cats".* FROM "cats"[0m
+  Rendered cats/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 27ms (Views: 25.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/cats" for ::1 at 2015-05-30 13:42:25 +1200
+Processing by CatsController#index as HTML
+  [1m[35mCat Load (0.4ms)[0m  SELECT "cats".* FROM "cats"
+  Rendered cats/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 26ms (Views: 25.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/cats.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-30 13:42:25 +1200
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-30 13:42:25 +1200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-30 13:42:25 +1200
+
+
+Started GET "/assets/cats.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-30 13:42:25 +1200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-05-30 13:42:25 +1200
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-05-30 13:42:25 +1200
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-30 13:42:25 +1200
+
+
+Started GET "/cats/new" for ::1 at 2015-05-30 13:42:27 +1200
+Processing by CatsController#new as HTML
+  Rendered cats/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 29ms (Views: 27.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/cats" for ::1 at 2015-05-30 13:42:42 +1200
+Processing by CatsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZEv+Pj8hxwTzpRes5hD/XNa5ndy4+8e9Nwjt5HZ2vlzxVLVszPOClFKb+UF6vwHITBvrAIilACzYfSkkVRIChw==", "cat"=>{"name"=>"Grumpy Cat", "life_story"=>"Gangter", "image_url"=>"<%= link_to('make a new cat', new_cat_path) %>"}, "commit"=>"Save Cat"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "cats" ("name", "life_story", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Grumpy Cat"], ["life_story", "Gangter"], ["image_url", "<%= link_to('make a new cat', new_cat_path) %>"], ["created_at", "2015-05-30 01:42:42.527807"], ["updated_at", "2015-05-30 01:42:42.527807"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/cats/11
+Completed 302 Found in 5ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/cats/11" for ::1 at 2015-05-30 13:42:42 +1200
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[35mCat Load (0.2ms)[0m  SELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "cats" SET "lives" = $1, "updated_at" = $2 WHERE "cats"."id" = $3  [["lives", 8], ["updated_at", "2015-05-30 01:42:42.540195"], ["id", 11]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  Rendered cats/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 27ms (Views: 22.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/cats" for ::1 at 2015-05-30 13:42:48 +1200
+Processing by CatsController#index as HTML
+  [1m[35mCat Load (0.4ms)[0m  SELECT "cats".* FROM "cats"
+  Rendered cats/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 100ms (Views: 98.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/cats/new" for ::1 at 2015-05-30 13:42:56 +1200
+Processing by CatsController#new as HTML
+  Rendered cats/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 27ms (Views: 26.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/cats" for ::1 at 2015-05-30 13:43:25 +1200
+Processing by CatsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"U4cqy/hoBDd9DwfBnYD7Zf3H7TBmcw+sXZvYHe3IaL/GmGGZC7pBp9wx6SwBLwXxZ2Wb7FYtyD2y7hzdzqzUZA==", "cat"=>{"name"=>"Grumpy Cat", "life_story"=>"Gangster", "image_url"=>"data:image/jpeg;base64,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"}, "commit"=>"Save Cat"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "cats" ("name", "life_story", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Grumpy Cat"], ["life_story", "Gangster"], ["image_url", "data:image/jpeg;base64,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"], ["created_at", "2015-05-30 01:43:25.252730"], ["updated_at", "2015-05-30 01:43:25.252730"]]
+  [1m[36m (14.9ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/cats/12
+Completed 302 Found in 21ms (ActiveRecord: 15.7ms)
+
+
+Started GET "/cats/12" for ::1 at 2015-05-30 13:43:25 +1200
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mCat Load (0.2ms)[0m  SELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT 1  [["id", 12]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "cats" SET "lives" = $1, "updated_at" = $2 WHERE "cats"."id" = $3  [["lives", 8], ["updated_at", "2015-05-30 01:43:25.283815"], ["id", 12]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  Rendered cats/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 25ms (Views: 21.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/cats" for ::1 at 2015-05-30 13:43:27 +1200
+Processing by CatsController#index as HTML
+  [1m[35mCat Load (0.4ms)[0m  SELECT "cats".* FROM "cats"
+  Rendered cats/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 26ms (Views: 24.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/cats/3" for ::1 at 2015-05-30 13:43:30 +1200
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCat Load (0.2ms)[0m  [1mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "cats" SET "lives" = $1, "updated_at" = $2 WHERE "cats"."id" = $3[0m  [["lives", 8], ["updated_at", "2015-05-30 01:43:30.284053"], ["id", 3]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  Rendered cats/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 29ms (Views: 25.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/cats" for ::1 at 2015-05-30 13:43:31 +1200
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (0.4ms)[0m  [1mSELECT "cats".* FROM "cats"[0m
+  Rendered cats/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 29ms (Views: 27.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/cats/3" for ::1 at 2015-05-30 13:43:41 +1200
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mCat Load (0.2ms)[0m  SELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "cats" SET "lives" = $1, "updated_at" = $2 WHERE "cats"."id" = $3  [["lives", 7], ["updated_at", "2015-05-30 01:43:41.931234"], ["id", 3]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  Rendered cats/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 26ms (Views: 22.8ms | ActiveRecord: 0.8ms)
